@@ -23,14 +23,14 @@
     owner: root
     group: root
     mode: 644
-  with_items: gpg_keys
+  with_items: "{{ gpg_keys }}"
   tags: yum
 
 - name: yum | Install extra repositories
   yum:
     name: "{{ item }}"
     state: installed
-  with_items: repo_rpms
+  with_items: "{{ repo_rpms }}"
   ignore_errors: True
   tags: yum
 
@@ -39,7 +39,7 @@
     name: "{{ item }}"
     state: latest
     update_cache: yes
-  with_items: centos_core_packages
+  with_items: "{{ centos_core_packages }}"
   tags: yum
 
 - name: yum | Update CentOS packages

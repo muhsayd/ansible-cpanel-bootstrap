@@ -8,5 +8,5 @@
   pip:
     name: "{{ item }}"
     state: latest
-  with_items: python_packages
+  with_items: "{{ python_packages }}"
   tags: python
