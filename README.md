@@ -102,7 +102,7 @@ li_cpanel_whm_plugins | Installs some extra WHM plugins, Logview, RemoteMXWizard
 **Variables**  
 All variables are defined as defaults in the Roles. This means you can override them with other values quite easily.  
 We've provided a sample group_vars structure to get you started.  
-Refer [to this document](http://http://docs.ansible.com/ansible/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable) for more information on variable precedence.
+Refer [to this document](https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable) for more information on variable precedence.
 
 Some variables MUST be defined by you or certain tasks won't run.  Variables prefixed with "install_" are used to determine if a specific app should be installed.  Any install tasks will check if that variable is "true".  Variables prefixed with "use_" are used to determine if a specific role / task should be run (this may include installing a package like NTP but not an app like CloudLinux).  
 Below is a list of those variables.  Please note the defaults, if you don't define a variable in your host_vars or group_vars, the default will be used. 
